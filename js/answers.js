@@ -77,3 +77,14 @@ chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
     }
   }
 });
+
+// I don't know why this is needed
+let el = document.createElement("script");
+el.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js";
+el.id = "MathJAx-script";
+el.async = true;
+document.head.appendChild(el);
+
+let el2 = document.createElement("script");
+el2.src = "https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.43/polyfill.min.js";
+document.head.appendChild(el2);
